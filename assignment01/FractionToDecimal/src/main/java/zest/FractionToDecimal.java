@@ -1,5 +1,8 @@
 package zest;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class FractionToDecimal {
     /**
      * Converts a fraction given by numerator and denominator into a decimal string.
