@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+
+<h1>ConsecutiveElementsSum.java</h1>
+
+<table class="src">
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4be490da_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4be490da_1'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>package zest;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4be490da_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4be490da_2'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4be490da_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4be490da_3'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>public class ConsecutiveElementsSum {</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4be490da_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4be490da_4'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4be490da_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4be490da_5'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * Calculates the maximum sum of consecutive elements in the array.</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4be490da_6'/>
+6
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4be490da_6'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * @param numbers the array of integers to analyze.</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4be490da_7'/>
+7
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4be490da_7'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * @return the maximum sum of consecutive elements.</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4be490da_8'/>
+8
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4be490da_8'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     */</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4be490da_9'/>
+9
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4be490da_9'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public static int maxConsecutiveSum(int[] numbers) {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4be490da_10'/>
+10
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4be490da_10'>2</a>
+<span>
+1. maxConsecutiveSum : negated conditional &rarr; KILLED<br/>
+2. maxConsecutiveSum : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (numbers == null || numbers.length == 0) {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4be490da_11'/>
+11
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4be490da_11'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>            return 0;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4be490da_12'/>
+12
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4be490da_12'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4be490da_13'/>
+13
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4be490da_13'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4be490da_14'/>
+14
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4be490da_14'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        int maxSum = numbers[0];</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4be490da_15'/>
+15
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4be490da_15'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        int currentSum = numbers[0];</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4be490da_16'/>
+16
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4be490da_16'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4be490da_17'/>
+17
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4be490da_17'>2</a>
+<span>
+1. maxConsecutiveSum : changed conditional boundary &rarr; KILLED<br/>
+2. maxConsecutiveSum : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        for (int i = 1; i &#60; numbers.length; i++) {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4be490da_18'/>
+18
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4be490da_18'>1</a>
+<span>
+1. maxConsecutiveSum : Replaced integer addition with subtraction &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            currentSum = Math.max(numbers[i], currentSum + numbers[i]);</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4be490da_19'/>
+19
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4be490da_19'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>            maxSum = Math.max(maxSum, currentSum);</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4be490da_20'/>
+20
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4be490da_20'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4be490da_21'/>
+21
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4be490da_21'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4be490da_22'/>
+22
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4be490da_22'>1</a>
+<span>
+1. maxConsecutiveSum : replaced int return with 0 for zest/ConsecutiveElementsSum::maxConsecutiveSum &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return maxSum;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4be490da_23'/>
+23
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4be490da_23'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4be490da_24'/>
+24
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4be490da_24'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>}</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4be490da_25'/>
+25
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4be490da_25'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@4be490da_10'>10</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@4be490da_10'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>maxConsecutiveSum<br/><b>Killed by : </b>zest.ConsecutiveElementsSumTest.[engine:junit-jupiter]/[class:zest.ConsecutiveElementsSumTest]/[method:testEmptyArray()]</span></span> negated conditional &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>maxConsecutiveSum<br/><b>Killed by : </b>zest.ConsecutiveElementsSumTest.[engine:junit-jupiter]/[class:zest.ConsecutiveElementsSumTest]/[method:testNullArray()]</span></span> negated conditional &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@4be490da_17'>17</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@4be490da_17'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>maxConsecutiveSum<br/><b>Killed by : </b>zest.ConsecutiveElementsSumTest.[engine:junit-jupiter]/[class:zest.ConsecutiveElementsSumTest]/[method:testMultipleNegativeElements()]</span></span> changed conditional boundary &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>maxConsecutiveSum<br/><b>Killed by : </b>zest.ConsecutiveElementsSumTest.[engine:junit-jupiter]/[class:zest.ConsecutiveElementsSumTest]/[test-template:testSimpleNumbers(%5BI, int)]/[test-template-invocation:#2]</span></span> negated conditional &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@4be490da_18'>18</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@4be490da_18'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>maxConsecutiveSum<br/><b>Killed by : </b>zest.ConsecutiveElementsSumTest.[engine:junit-jupiter]/[class:zest.ConsecutiveElementsSumTest]/[method:testMultipleNegativeElements()]</span></span> Replaced integer addition with subtraction &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@4be490da_22'>22</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@4be490da_22'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>maxConsecutiveSum<br/><b>Killed by : </b>zest.ConsecutiveElementsSumTest.[engine:junit-jupiter]/[class:zest.ConsecutiveElementsSumTest]/[method:testMultipleNegativeElements()]</span></span> replaced int return with 0 for zest/ConsecutiveElementsSum::maxConsecutiveSum &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+<li class='mutator'>CONDITIONALS_BOUNDARY</li>
+<li class='mutator'>EMPTY_RETURNS</li>
+<li class='mutator'>FALSE_RETURNS</li>
+<li class='mutator'>INCREMENTS</li>
+<li class='mutator'>INVERT_NEGS</li>
+<li class='mutator'>MATH</li>
+<li class='mutator'>NEGATE_CONDITIONALS</li>
+<li class='mutator'>NULL_RETURNS</li>
+<li class='mutator'>PRIMITIVE_RETURNS</li>
+<li class='mutator'>TRUE_RETURNS</li>
+<li class='mutator'>VOID_METHOD_CALLS</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>zest.ConsecutiveElementsSumTest.[engine:junit-jupiter]/[class:zest.ConsecutiveElementsSumTest]/[method:testMultipleNegativeElements()] (0 ms)</li><li>zest.ConsecutiveElementsSumTest.[engine:junit-jupiter]/[class:zest.ConsecutiveElementsSumTest]/[test-template:testSimpleNumbers(%5BI, int)]/[test-template-invocation:#2] (0 ms)</li><li>zest.ConsecutiveElementsSumTest.[engine:junit-jupiter]/[class:zest.ConsecutiveElementsSumTest]/[method:testLargeNumberFarAway()] (0 ms)</li><li>zest.ConsecutiveElementsSumTest.[engine:junit-jupiter]/[class:zest.ConsecutiveElementsSumTest]/[test-template:testSimpleNumbers(%5BI, int)]/[test-template-invocation:#5] (0 ms)</li><li>zest.ConsecutiveElementsSumTest.[engine:junit-jupiter]/[class:zest.ConsecutiveElementsSumTest]/[test-template:testSimpleNumbers(%5BI, int)]/[test-template-invocation:#3] (0 ms)</li><li>zest.ConsecutiveElementsSumTest.[engine:junit-jupiter]/[class:zest.ConsecutiveElementsSumTest]/[test-template:testSimpleNumbers(%5BI, int)]/[test-template-invocation:#4] (0 ms)</li><li>zest.ConsecutiveElementsSumTest.[engine:junit-jupiter]/[class:zest.ConsecutiveElementsSumTest]/[method:testTwoElements()] (0 ms)</li><li>zest.ConsecutiveElementsSumTest.[engine:junit-jupiter]/[class:zest.ConsecutiveElementsSumTest]/[test-template:testMultiplePositiveAndNegativeElements(%5BI, int)]/[test-template-invocation:#2] (0 ms)</li><li>zest.ConsecutiveElementsSumTest.[engine:junit-jupiter]/[class:zest.ConsecutiveElementsSumTest]/[test-template:testMultiplePositiveAndNegativeElements(%5BI, int)]/[test-template-invocation:#3] (0 ms)</li><li>zest.ConsecutiveElementsSumTest.[engine:junit-jupiter]/[class:zest.ConsecutiveElementsSumTest]/[method:testMultiplePositiveElements()] (0 ms)</li><li>zest.ConsecutiveElementsSumTest.[engine:junit-jupiter]/[class:zest.ConsecutiveElementsSumTest]/[test-template:testSimpleNumbers(%5BI, int)]/[test-template-invocation:#1] (0 ms)</li><li>zest.ConsecutiveElementsSumTest.[engine:junit-jupiter]/[class:zest.ConsecutiveElementsSumTest]/[test-template:testMultiplePositiveAndNegativeElements(%5BI, int)]/[test-template-invocation:#1] (6 ms)</li><li>zest.ConsecutiveElementsSumTest.[engine:junit-jupiter]/[class:zest.ConsecutiveElementsSumTest]/[method:testEmptyArray()] (0 ms)</li><li>zest.ConsecutiveElementsSumTest.[engine:junit-jupiter]/[class:zest.ConsecutiveElementsSumTest]/[method:testSinglePositiveElement()] (0 ms)</li><li>zest.ConsecutiveElementsSumTest.[engine:junit-jupiter]/[class:zest.ConsecutiveElementsSumTest]/[method:testSingleZeroElement()] (0 ms)</li><li>zest.ConsecutiveElementsSumTest.[engine:junit-jupiter]/[class:zest.ConsecutiveElementsSumTest]/[method:testSingleNegativeElement()] (4 ms)</li><li>zest.ConsecutiveElementsSumTest.[engine:junit-jupiter]/[class:zest.ConsecutiveElementsSumTest]/[method:testNullArray()] (0 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='https://pitest.org'>PIT</a> 1.18.2
+
+</body>
+</html>
