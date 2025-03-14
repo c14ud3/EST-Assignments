@@ -1,5 +1,5 @@
 # Solution ParenthesesValidator
-
+## Part 1: Requirements Testing
 ### Step 1: Understanding the requirements, inputs and outputs
 #### The inputs:
 The input consists of a string containing only the characters: '(', ')', '{', '}', '[' and ']'. No other character types are permitted in the input.
@@ -61,4 +61,33 @@ The following test cases should return false:
 
 ### Step 6: Automate the test cases
 
-Look into the test file for the implementation of the test cases.
+Look into the test file for the implementation of the 13 test cases.
+
+### Step 7: Augment the test suite with creativity and experience
+
+We already have 13 test cases, which feels already enough to us. We decide to continue with structural testing to see if some test cases are missing and it's not forbidden to come back to this step if needed.
+
+## Part 2: Structural Testing
+
+### Step 1: Perform specification based testing
+We have already done this.
+### Step 2: Read the implementation and understand the main coding decisions made by the developer
+It's not very hard to understand this code so there isn't much to say. We also didn't spot any error first-hand.
+### Step 3: Run the devised test cases with a code coverage tool
+Using Jacoco, we got 100% line and path coverage.
+### Step 4: For each piece of code that is not covered, understand the issue and decide if it deserves a test
+Since we have 100% line and path coverage, we don't have to do this.
+### Step 5: Look for other interesting pieces of the code
+We think that we don't have to do this either, because the method is relatively simple. Of course we could test it with a string that includes other characters than parentheses, but it's obvious to us by looking at the code that it will just return "false" in that case. Moreover, the specification explicitly states that the input string will only contain parentheses. Even if this is structural testing, it makes no sense to test things that are obviously excluded by the specification, and it just wastes time (keep efficiency in mind).
+
+## Part 3: Mutation Testing
+
+We ran Pitest and got the following report:
+>> Line Coverage (for mutated classes only): 7/8 (88%)
+>> Generated 8 mutations Killed 8 (100%)
+>> Mutations with no coverage 0. Test strength 100%
+>> Ran 15 tests (1.88 tests per mutation)
+
+We can see that we got 100% of mutants killed. Line coverage is only 88%, however a quick investigation in the "index.html" file in the "target" folder shows that the uncovered line is line 5, which is the class definition.
+We are happy with the results and don't see the need to add more tests.
+
