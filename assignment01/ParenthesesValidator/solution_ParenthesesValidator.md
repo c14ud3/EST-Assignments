@@ -12,7 +12,7 @@ The output is a boolean value: true if the string is valid as per the rules abov
 We have tested some examples to understand the behavior of the program. Once we were confident, we moved to the next step.
 
 ### Step 3: Explore possible inputs and outputs, and identify partitions
-We first focus on the so-called "good weather" scenarios, where we expect the program to work correctly. In this case, we can consider the following partitions:
+We first focus on the so-called "good weather" scenarios, where we expect the program to return true. In this case, we can consider the following partitions:
 - Partition 1: The input string is empty.
 - Partition 2: The input string contains a valid sequence of brackets with only one type of bracket.
 
