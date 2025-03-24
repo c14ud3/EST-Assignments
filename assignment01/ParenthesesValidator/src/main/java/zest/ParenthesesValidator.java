@@ -1,5 +1,7 @@
 package zest;
 
+import java.util.Stack;
+
 public class ParenthesesValidator {
     /**
      * Validates a string of parentheses.
