@@ -54,38 +54,47 @@ class PatternEncoderTest {
     }
 
     @Test // test case 8
-    void testSingleSubstringRepeatedOnce() {
-        String input = "abab";
-        String expected = "2[ab]";
+    void testRepeatedSubstring() {
+        String input = "abcabc";
+        String expected = "abcabc"; // not "2[abc]"
         assertEquals(expected, PatternEncoder.encodeString(input));
     }
 
     @Test // test case 9
-    void testSingleSubstringRepeatedMoreThanOnce() {
-        String input = "ababab";
-        String expected = "3[ab]";
+    void testSubstringAtBeginning() {
+        String input = "aaabc";
+        String expected = "3[a]bc";
         assertEquals(expected, PatternEncoder.encodeString(input));
     }
 
     @Test // test case 10
-    void testMultipleSubstringsRepeatedMoreThanOnce() {
-        String input = "abababxyzxyz";
-        String expected = "3[ab]2[xyz]";
+    void testSubstringInMiddle() {
+        String input = "abcaab";
+        String expected = "abc2[a]b";
         assertEquals(expected, PatternEncoder.encodeString(input));
     }
 
     @Test // test case 11
-    void testNestedRepetitionSingleSubstring() {
-        String input = "ababcababc";
-        String expected = "2[2[ab]c]";
+    void testSubstringAtEnd() {
+        String input = "abcaaa";
+        String expected = "abc3[a]";
         assertEquals(expected, PatternEncoder.encodeString(input));
     }
 
     @Test // test case 12
-    void testNestedRepetitionMultipleSubstrings() {
-        String input = "ababcababcxyzxyz";
-        String expected = "2[2[ab]c]2[xyz]";
+    void testMultipleSubstrings() {
+        String input = "abbbcddde";
+        String expected = "a3[b]c3[d]e";
         assertEquals(expected, PatternEncoder.encodeString(input));
     }
+
+    @Test // test case 13
+    void testNull() {
+        String input = null;
+        String expected = null;
+        assertEquals(expected, PatternEncoder.encodeString(input));
+    }
+
+
 
 }
