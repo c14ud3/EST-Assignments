@@ -10,6 +10,12 @@ public class NumberEncoder {
      * @throws ArrayIndexOutOfBoundsException if mapping array is less than 10 characters.
      */
     public static String encodeNumber(String number, char[] mapping) {
+        if (number.matches(".*[^0-9].*")) {
+            throw new IllegalArgumentException("Input contains invalid characters.");
+        }
+        if (mapping.length < 10) {
+            throw new ArrayIndexOutOfBoundsException();
+        }
         StringBuilder encoded = new StringBuilder();
         for (int i = 0; i < number.length(); i++) {
             int digit = Character.getNumericValue(number.charAt(i));
