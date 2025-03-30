@@ -1,4 +1,4 @@
-# Array Element Swapper
+# Interval Merger
 
 ## 1. Specification-based testing
 
@@ -18,13 +18,13 @@ The program was explored with different inputs and checking the outputs. Followi
 - Negative numbers in the intervals.
 
 ### 1.4 Analyze the boundaries
-There are multiple different cases in which it is either true or false that the intervals overlap. There also is no boundary on how many intervals overlap, since there can be infinitely many intervals. Edge case is the empty array. 
+There are multiple different cases in which it is either true or false that the intervals overlap. There is the on-point test where two intervals exactly meet ([2,4],[4.6]) and the off-point-test where they don't overlap with 1 difference ([2,4],[5,6]). There also is no boundary on how many intervals overlap, since there can be infinitely many intervals. Edge case is the empty array.  
 
 ### 1.5, 1.6 Devise & automate test cases
-We came up with the following test cases: `testEmptyList`
+We came up with the following test cases: `testEmptyList`, `testEmptyInterval`, `testMultipleEmptyIntervals`, `testOneInterval`, `testTwoOverlappingIntervals`, `testTwoNotOverlappingIntervals`, `testMultipleOverlappingIntervals`, `testMultipleNotOverlappingIntervals`, `testSameInterval`, `testNonOverlappingIntervalsWithNegativeValues`, `testOverlappingIntervalsWithNegativeValues`, `testUnsortedNonOVerlap`, `testUnsortedOverlap`, `testOneDigitIntervals`, `testOneDigit`, `testOneEmptyInterval`, `testInvalidIntervals` and `testMultipleInvalidIntervals`. 
 
 ### 1.7 Augment
-During augmentation, we realized that the function can not handle multiple empty intervals. We added the test case `testEmptyListMultiple` which now checks that an Exception is thrown when multiple empty intervals are given.
+During augmentation, we realized that the function can not handle multiple empty intervals. We added the test case `testMultipleEmptyIntervals` which now checks that an Exception is thrown when multiple empty intervals are given.
 
 ## 2. Structural testing
 During structural testing we achieved a line coverage of 100% and a branch coverage of 100%. We therefore added no tests to achieve a higher coverage.

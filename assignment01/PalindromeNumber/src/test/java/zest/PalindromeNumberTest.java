@@ -43,6 +43,7 @@ class PalindromeNumberTest {
             Arguments.of(Integer.MIN_VALUE),
             Arguments.of(10),
             Arguments.of(87),
+            Arguments.of(120),
             Arguments.of(178),
             Arguments.of(214747413),
             Arguments.of(Integer.MAX_VALUE),

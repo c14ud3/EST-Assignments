@@ -7,14 +7,17 @@ The requirement was understood. The input is a random integer and the method che
 
 ### 1.2, 1.3 Explore the program, in-/outputs and identify partitions
 The program was explored with different inputs and checking the outputs. Following partitions were identified:
-- Palindrome numbers --> True
-- Non palindrome numbers --> False
+- Positive palindrome of even length -> true
+- Positive palindrome of odd length -> true
+- Negative numbers, which is a negated positive palindrome -> false
+- Single digit positive number -> true
+- Non-palindrome number -> false
 
 ### 1.4 Analyze the boundaries
-There are boundaries at every palindrome number before and after. One specific boundary is a 0, since every negative numbers throws an error and the digits up to 9 are palindromes. From there on, the first palindrome number is 11.
+There are boundaries at every palindrome number before and after. One specific boundary is a 0, since every negative numbers throws an error and the digits up to 9 are palindromes. From there on, the first palindrome number is 11. As on-point-test we can choose a correct palindrome (121) and as off-point-test one number below or above (120 or 122). 
 
 ### 1.5, 1.6 Devise & automate test cases
-We came up with parameterized test the following test cases: `testEmptyList`
+For Testing we opted for Parameterized tests, since it was easier to write many tests like this. We came up with the following test cases: For output true `0, 1, 5, 11, 121, 111, 122222221, 214747412, 2147447412` For output false: `-1, -11, -121, -11111, INTEGER.MIN_VALUE, 10, 87, 178, 214747413, INTEGER.MAX_VALUE, 1711`
 
 ### 1.7 Augment
 During testing we found that if the number string had invalid input (e.g. negative digits or non-numeric characters), the program would not throw the correct Exception . We fixed the bug by checking the number string first and throwing the IllegalArgumentException if the input is invalid.
