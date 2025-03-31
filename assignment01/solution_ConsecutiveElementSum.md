@@ -5,16 +5,19 @@
 ### 1.1 Understand the requirement
 Done.
 
-### 1.2, 1.3 Explore the program, in-/outputs and identify partitions
+### 1.2 Explore the program, in-/outputs
 To explore the program, `testSimpleNumbers` has been created and further extended.
 
-### 1.4 Analyze the boundaries
-We identified the following boundaries:
+### 1.3 Identify partitions
+We identified the following partitions:
 - Empty array: the sum should be 0
 - Array contains exactly one (positive or negative) element: sum should be element
 - Array contains multiple positive elements: sum should be the sum of all elements
 - Array contains multiple negative elements: sum should be nearest element to 0
 - Array contains multiple positive & negative elements: sum should be consecutive elements sum
+
+### 1.4 Analyze the boundaries
+We didn't find any boundaries here, since we cannot simply check on the following condition: `if (input[i] > 0) { output.add(input[i]); }`.
 
 ### 1.5, 1.6 Devise & automate test cases
 We came up with the following test cases: `testEmptyArray`, `testNullArray`, `testSinglePositiveElement`, `testSingleNegativeElement`, `testMultiplePositiveElements`, `testMultipleNegativeElements`, `testMultiplePositiveAndNegativeElements`.
