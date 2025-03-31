@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ArrayElementSwapper.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ArrayElementSwapper-test</a> &gt; <a href="index.source.html" class="el_package">zest</a> &gt; <span class="el_source">ArrayElementSwapper.java</span></div><h1>ArrayElementSwapper.java</h1><pre class="source lang-java linenums">package zest;
+
+<span class="fc" id="L3">public class ArrayElementSwapper {</span>
+    /**
+     * Rearranges the elements of the given array such that all negative numbers
+     * come before all non-negative numbers, while preserving the order of negative
+     * and non-negative numbers within their groups.
+     * @param numbers the array of integers to be rearranged.
+     */
+    public static void swapElements(int[] numbers) {
+<span class="fc bfc" id="L11" title="All 4 branches covered.">        if (numbers == null || numbers.length &lt;= 1) {</span>
+<span class="fc" id="L12">            return;</span>
+        }
+
+        // loop through all elements in the array
+<span class="fc bfc" id="L16" title="All 2 branches covered.">        for (int i = 0; i &lt; numbers.length; i++) {</span>
+            // if the current element is negative
+<span class="fc bfc" id="L18" title="All 2 branches covered.">            if(numbers[i] &lt; 0) {</span>
+                // move it to the left as long as it is not the first element
+                // and the previous element is non-negative
+<span class="fc bfc" id="L21" title="All 4 branches covered.">                for (int j = i; j &gt; 0 &amp;&amp; numbers[j - 1] &gt;= 0; j--) {</span>
+                    // swap the current element with the previous element
+<span class="fc" id="L23">                    int temp = numbers[j];</span>
+<span class="fc" id="L24">                    numbers[j] = numbers[j - 1];</span>
+<span class="fc" id="L25">                    numbers[j - 1] = temp;</span>
+                }
+            }
+        }
+<span class="fc" id="L29">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

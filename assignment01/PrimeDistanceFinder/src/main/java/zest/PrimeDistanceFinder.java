@@ -1,5 +1,9 @@
 package zest;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class PrimeDistanceFinder {
     /**
      * Finds the smallest difference between any two prime numbers in an array.

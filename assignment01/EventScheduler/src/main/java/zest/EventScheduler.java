@@ -12,6 +12,8 @@ public class EventScheduler {
 
         // Check for overlaps
         for (int i = 0; i < events.length - 1; i++) {
+            if (events[i].length != 2) return false;
+
             if (events[i][1] > events[i + 1][0]) {
                 return true;
             }
