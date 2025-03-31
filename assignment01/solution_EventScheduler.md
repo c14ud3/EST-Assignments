@@ -5,11 +5,11 @@
 ### 1.1 Understand the requirement
 Done.
 
-### 1.2, 1.3 Explore the program, in-/outputs and identify partitions
+### 1.2 Explore the program, in-/outputs
 To explore the program, `testSimpleEvents` has been created and further extended.
 
-### 1.4 Analyze the boundaries
-We identified the following boundaries:
+### 1.3 Identify partitions
+We identified the following partitions:
 - Empty array on dimension 1 or 2: no conflict
 - Null array on dimension 2: no conflict
 - Only one event: no conflict
@@ -18,8 +18,13 @@ We identified the following boundaries:
 - Multiple events, overlapping: conflict
 - Exception: event-array has not exactly 2 integers
 
+### 1.4 Analyze the boundaries
+The found boundary is here, given events a and b the following: `a.startTime() < b.endTime() || b.startTime() < a.endTime()`.
+The off-point condition is thereby `a.startTime() == b.endTime()`.
+
 ### 1.5, 1.6 Devise & automate test cases
 We came up with the following test cases: `testEmptyEvents1`, `testEmptyEvents2`, `testNullArray`, `testOnlyOneEvent`, `testMultipleEventsNotOverlapping`, `testMultipleEventsOverlapping`, `testTooFewIntegers`, `testTooManyIntegers`. We realized that the tests `testTooFewIntegers` and `testTooManyIntegers` failed, since there was a check missing. We added it: `if (events[i].length != 2) return false;`.
+The boundaries are checked in `testMultipleEventsTouching` (off-point) and `testMultipleEventsOverlapping` (on-point).
 
 ### 1.7 Augment
 Nothing new here.

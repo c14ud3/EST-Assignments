@@ -29,7 +29,7 @@ class ConsecutiveElementsSumTest {
         );
     }
 
-    // Boundaries
+    // Partitions
     @Test
     void testEmptyArray() {
         int result = ConsecutiveElementsSum.maxConsecutiveSum(new int[]{});
