@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="de"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>IntervalMerger.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">IntervalMerger-test</a> &gt; <a href="index.source.html" class="el_package">zest</a> &gt; <span class="el_source">IntervalMerger.java</span></div><h1>IntervalMerger.java</h1><pre class="source lang-java linenums">package zest;
+
+import java.util.Arrays;
+import java.util.LinkedList;
+
+<span class="fc" id="L6">public class IntervalMerger {</span>
+
+    public static int[][] mergeIntervals(int[][] intervals) {
+<span class="fc bfc" id="L9" title="All 4 branches covered.">        if (intervals.length &lt;= 1 || intervals[0].length == 0) {</span>
+<span class="fc" id="L10">            return intervals;</span>
+        }
+
+        // Sort the intervals by their starting times
+<span class="fc" id="L14">        Arrays.sort(intervals, (a, b) -&gt; Integer.compare(a[0], b[0]));</span>
+
+<span class="fc" id="L16">        LinkedList&lt;int[]&gt; merged = new LinkedList&lt;&gt;();</span>
+<span class="fc bfc" id="L17" title="All 2 branches covered.">        for (int[] interval : intervals) {</span>
+            // if the list of merged intervals is empty or if the current
+            // interval does not overlap with the previous, simply append it.
+<span class="fc bfc" id="L20" title="All 4 branches covered.">            if (merged.isEmpty() || merged.getLast()[1] &lt; interval[0]) {</span>
+<span class="fc" id="L21">                merged.add(interval);</span>
+            } else {
+                // otherwise, there is overlap, so we merge the current and previous
+                // intervals by updating the end time of the last interval in the list.
+<span class="fc" id="L25">                merged.getLast()[1] = Math.max(merged.getLast()[1], interval[1]);</span>
+            }
+        }
+
+<span class="fc" id="L29">        return merged.toArray(new int[merged.size()][]);</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

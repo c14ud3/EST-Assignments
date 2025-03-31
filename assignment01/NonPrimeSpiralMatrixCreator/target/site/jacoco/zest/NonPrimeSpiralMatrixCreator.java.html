@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="de"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>NonPrimeSpiralMatrixCreator.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">NonPrimeSprialMatrixCreator-test</a> &gt; <a href="index.source.html" class="el_package">zest</a> &gt; <span class="el_source">NonPrimeSpiralMatrixCreator.java</span></div><h1>NonPrimeSpiralMatrixCreator.java</h1><pre class="source lang-java linenums">package zest;
+
+<span class="nc" id="L3">public class NonPrimeSpiralMatrixCreator {</span>
+
+    private static boolean isPrime(int num) {
+<span class="fc bfc" id="L6" title="All 2 branches covered.">        if (num &lt;= 1) return false; // Correctly recognize 1 as not prime</span>
+<span class="fc bfc" id="L7" title="All 2 branches covered.">        if (num == 2) return true;  // 2 is the only even prime number</span>
+<span class="fc bfc" id="L8" title="All 2 branches covered.">        if (num % 2 == 0) return false; // Exclude even numbers</span>
+<span class="fc bfc" id="L9" title="All 2 branches covered.">        for (int i = 3; i * i &lt;= num; i += 2) {</span>
+<span class="fc bfc" id="L10" title="All 2 branches covered.">            if (num % i == 0) return false;</span>
+        }
+<span class="fc" id="L12">        return true;</span>
+    }
+
+    public static int[] createSpiralMatrix(int n) {
+<span class="fc bfc" id="L16" title="All 2 branches covered.">        if (n == 0) {</span>
+<span class="fc" id="L17">            return new int[0];</span>
+        }
+<span class="fc bfc" id="L19" title="All 2 branches covered.">        if (n &lt; 0) {</span>
+<span class="fc" id="L20">            throw new IllegalArgumentException(&quot;Input must be a non-negative integer&quot;);</span>
+        }
+
+<span class="fc" id="L23">        int[][] matrix = new int[n][n];</span>
+<span class="fc" id="L24">        int val = 1; // Start with the first non-prime number greater than 1</span>
+<span class="fc" id="L25">        int left = 0, right = n - 1, top = 0, bottom = n - 1;</span>
+
+<span class="pc bpc" id="L27" title="1 of 4 branches missed.">        while (left &lt;= right &amp;&amp; top &lt;= bottom) {</span>
+<span class="fc bfc" id="L28" title="All 2 branches covered.">            for (int i = left; i &lt;= right; i++) {</span>
+<span class="fc bfc" id="L29" title="All 2 branches covered.">                while (isPrime(val)) val++;</span>
+<span class="fc" id="L30">                matrix[top][i] = val++;</span>
+            }
+<span class="fc" id="L32">            top++;</span>
+
+<span class="fc bfc" id="L34" title="All 2 branches covered.">            for (int i = top; i &lt;= bottom; i++) {</span>
+<span class="fc bfc" id="L35" title="All 2 branches covered.">                while (isPrime(val)) val++;</span>
+<span class="fc" id="L36">                matrix[i][right] = val++;</span>
+            }
+<span class="fc" id="L38">            right--;</span>
+
+<span class="fc bfc" id="L40" title="All 2 branches covered.">            if (bottom &gt;= top) {</span>
+<span class="fc bfc" id="L41" title="All 2 branches covered.">                for (int i = right; i &gt;= left; i--) {</span>
+<span class="fc bfc" id="L42" title="All 2 branches covered.">                    while (isPrime(val)) val++;</span>
+<span class="fc" id="L43">                    matrix[bottom][i] = val++;</span>
+                }
+<span class="fc" id="L45">                bottom--;</span>
+            }
+
+<span class="fc bfc" id="L48" title="All 2 branches covered.">            if (right &gt;= left) {</span>
+<span class="fc bfc" id="L49" title="All 2 branches covered.">                for (int i = bottom; i &gt;= top; i--) {</span>
+<span class="fc bfc" id="L50" title="All 2 branches covered.">                    while (isPrime(val)) val++;</span>
+<span class="fc" id="L51">                    matrix[i][left] = val++;</span>
+                }
+<span class="fc" id="L53">                left++;</span>
+            }
+        }
+
+        // Flatten the matrix into a single array
+<span class="fc" id="L58">        int[] flatMatrix = new int[n * n];</span>
+<span class="fc" id="L59">        int k = 0;</span>
+<span class="fc bfc" id="L60" title="All 2 branches covered.">        for (int i = 0; i &lt; n; i++) {</span>
+<span class="fc bfc" id="L61" title="All 2 branches covered.">            for (int j = 0; j &lt; n; j++) {</span>
+<span class="fc" id="L62">                flatMatrix[k++] = matrix[i][j];</span>
+            }
+        }
+<span class="fc" id="L65">        return flatMatrix;</span>
+    }
+
+//    public static void main(String[] args) {
+//        int n = -1;  // Change this value to see different sizes of matrix outputs
+//        int[] output = createSpiralMatrix(n);
+//        System.out.println(&quot;Output for n = &quot; + n + &quot;:&quot;);
+//        for (int i = 0; i &lt; output.length; i++) {
+//            System.out.print(output[i] + (i % n == n - 1 ? &quot;\n&quot; : &quot; &quot;));
+//        }
+//    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
