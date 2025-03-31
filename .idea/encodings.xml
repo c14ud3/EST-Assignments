@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/assignment01/ArrayElementSwapper/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/assignment01/ArrayElementSwapper/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/assignment01/ConsecutiveElementSum/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/assignment01/ConsecutiveElementSum/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/assignment01/EventScheduler/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/assignment01/EventScheduler/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/assignment01/FractionToDecimal/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/assignment01/FractionToDecimal/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/assignment01/IntervalMerger/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/assignment01/IntervalMerger/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/assignment01/NonPrimeSpiralMatrixCreator/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/assignment01/NonPrimeSpiralMatrixCreator/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/assignment01/NumberEncoder/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/assignment01/NumberEncoder/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/assignment01/PalindromeNumber/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/assignment01/PalindromeNumber/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/assignment01/ParenthesesValidator/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/assignment01/ParenthesesValidator/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/assignment01/PatternEncoder/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/assignment01/PatternEncoder/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/assignment01/PrimeDistanceFinder/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/assignment01/PrimeDistanceFinder/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/assignment01/StringTransformer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/assignment01/StringTransformer/src/main/resources" charset="UTF-8" />
+  </component>
+</project>
