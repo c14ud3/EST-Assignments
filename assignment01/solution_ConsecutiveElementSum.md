@@ -23,11 +23,11 @@ We didn't find any boundaries here, since we cannot simply check on the followin
 We came up with the following test cases: `testEmptyArray`, `testNullArray`, `testSinglePositiveElement`, `testSingleNegativeElement`, `testMultiplePositiveElements`, `testMultipleNegativeElements`, `testMultiplePositiveAndNegativeElements`.
 
 ### 1.7 Augment
-During augmentation, we realized that we could also test for the input `[0]`, so we created `testSingleZeroElement`. Also, we created a test, where there is a large number far away from the others to test whether this works aswell: `testLargeNumberFarAway`.
+During augmentation, we realized that we could also test for the input `[0]`, so we created `testSingleZeroElement`. Also, we created a test, where there is a large number far away from the others to test whether this works as well: `testLargeNumberFarAway`.
 
 
 ## 2. Structural testing
-Here, we especially lookd at the `if` statement and the `for` loop. For the `if`, already all branches are tested (`numbers == null`, `numbers.length == 0` and none of both). For the `for` loop, we want to check zero, one and multiple iterations. Zero iteration is not possible, since `numbers.length == 0` is already catched before. Mutliple iterations is already checked aswell with more than two inputs. However, we need to add a test case for exactly one loop iteration, which happens when the input array contains exactly two elements: `testTwoElements`. Also, we want to test the instantiation of the class: `testInstantiation`. We now have zero missed instructions or branches.
+Here, we especially lookd at the `if` statement and the `for` loop. For the `if`, already all branches are tested (`numbers == null`, `numbers.length == 0` and none of both). For the `for` loop, we want to check zero, one and multiple iterations. Zero iteration is not possible, since `numbers.length == 0` is already caught before. Multiple iterations is already checked as well with more than two inputs. However, we need to add a test case for exactly one loop iteration, which happens when the input array contains exactly two elements: `testTwoElements`. Also, we want to test the instantiation of the class: `testInstantiation`. We now have zero missed instructions or branches.
 
 
 ## 3. Mutation testing

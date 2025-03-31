@@ -32,4 +32,4 @@ Here, we realized that we did not check on the null array (`testNullArray`) and 
 
 
 ## 3. Mutation testing
-We performed mutation testing and got a mutation coverage of 93%. The survived mutation was found on line `if (numbers == null || numbers.length <= 1) {` where the `<= 1` is changed to `< 1`. However, we can't really fix this, since in this case just nothing happens and there can't be a proper assertion in `testEmptyArray`, since the funcition doesn't return anything.
+We performed mutation testing and got a mutation coverage of 93%. The survived mutation was found on line `if (numbers == null || numbers.length <= 1) {` where the `<= 1` is changed to `< 1`. However, we can't really fix this, since in this case just nothing happens and there can't be a proper assertion in `testEmptyArray`, since the function doesn't return anything.
