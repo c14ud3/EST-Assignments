@@ -16,9 +16,12 @@ public class NonPrimeSpiralMatrixCreator {
         if (n == 0) {
             return new int[0];
         }
+        if (n < 0) {
+            throw new IllegalArgumentException("Input must be a non-negative integer");
+        }
 
         int[][] matrix = new int[n][n];
-        int val = 4; // Start with the first non-prime number greater than 1
+        int val = 1; // Start with the first non-prime number greater than 1
         int left = 0, right = n - 1, top = 0, bottom = n - 1;
 
         while (left <= right && top <= bottom) {
@@ -63,12 +66,11 @@ public class NonPrimeSpiralMatrixCreator {
     }
 
 //    public static void main(String[] args) {
-//        int n = 3;  // Change this value to see different sizes of matrix outputs
+//        int n = -1;  // Change this value to see different sizes of matrix outputs
 //        int[] output = createSpiralMatrix(n);
 //        System.out.println("Output for n = " + n + ":");
 //        for (int i = 0; i < output.length; i++) {
 //            System.out.print(output[i] + (i % n == n - 1 ? "\n" : " "));
 //        }
 //    }
-
 }
