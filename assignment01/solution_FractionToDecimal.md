@@ -8,7 +8,7 @@ Done.
 ### 1.2 Explore the program, in-/outputs
 To explore the program, `testSimpleDivisions` has been created and further extended.
 
-1.3 Identify partitions
+### 1.3 Identify partitions
 We identified the following partitions:
 - numerator is 0
 - denominator is 0
@@ -19,7 +19,7 @@ We identified the following partitions:
 - division results in floating point with repeating decimal
 
 ### 1.4 Analyze the boundaries
-We identified the following bountaries: `hasRemainder(numerator/denominator)` and `hasFiniteRemainder(numerator/denominator)`.
+There are no boundaries in the classical sense, but we consider the following boundaries: `hasRemainder(numerator/denominator)` and `hasFiniteRemainder(numerator/denominator)`.
 
 ### 1.5, 1.6 Devise & automate test cases
 We came up with the following test cases: `testNumeratorZero`, `testDenominatorZero`, `testNumeratorNegative`, `testDenominatorNegative`, `testIntegerResult`, `testFloatingResult`, `testRepeatingResult`. Since all tests failed, we added the `java.utils` to the `FractionToDecimal` class.

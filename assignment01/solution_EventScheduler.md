@@ -20,7 +20,7 @@ We identified the following partitions:
 
 ### 1.4 Analyze the boundaries
 The found boundary is here, given events a and b the following: `a.startTime() < b.endTime() || b.startTime() < a.endTime()`.
-The off-point condition is thereby `a.startTime() == b.endTime()`.
+The off-point condition is thereby `a.startTime() == b.endTime()`, while the on-point condition is if there is an overlapping of exactly 1.
 
 ### 1.5, 1.6 Devise & automate test cases
 We came up with the following test cases: `testEmptyEvents1`, `testEmptyEvents2`, `testNullArray`, `testOnlyOneEvent`, `testMultipleEventsNotOverlapping`, `testMultipleEventsOverlapping`, `testTooFewIntegers`, `testTooManyIntegers`. We realized that the tests `testTooFewIntegers` and `testTooManyIntegers` failed, since there was a check missing. We added it: `if (events[i].length != 2) return false;`.
