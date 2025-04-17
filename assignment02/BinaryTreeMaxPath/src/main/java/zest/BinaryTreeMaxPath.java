@@ -12,9 +12,15 @@ public class BinaryTreeMaxPath {
         }
 
         public static TreeNode constructTree(Integer[] array) {
+            if (array.length == 0) return new TreeNode(0);
+            if (array.length > 1023) throw new IllegalArgumentException("The tree is too large.");
+
             TreeNode[] nodes = new TreeNode[array.length];
             for (int i = 0; i < array.length; i++) {
                 if (array[i] != null) {
+                    if (array[i] > 10000) throw new IllegalArgumentException("One value is too large: " + array[i]);
+                    if (array[i] < -10000) throw new IllegalArgumentException("One value is too small: " + array[i]);
+
                     nodes[i] = new TreeNode(array[i]);
                     if (i > 0) {
                         TreeNode parent = nodes[(i - 1) / 2];
