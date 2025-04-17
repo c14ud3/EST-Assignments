@@ -1,4 +1,4 @@
-# ArrayRotator
+# BinaryTreeMaxPath
 
 ## Task 1: Code Coverage
 
