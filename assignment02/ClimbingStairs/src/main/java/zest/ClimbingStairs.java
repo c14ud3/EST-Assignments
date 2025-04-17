@@ -9,7 +9,8 @@ public class ClimbingStairs {
      * @return The number of distinct ways to climb to the top.
      */
     public long climbStairs(int n) {
-        
+        if (n <= 0) throw new IllegalArgumentException("The number of stairs must be a positive integer");
+
         // Base cases handling
         if (n == 1) {
             return 1;
