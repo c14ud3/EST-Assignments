@@ -12,12 +12,10 @@
         <module name="TwoSum" />
         <module name="NumberEncoder-test" />
         <module name="FractionToDecimal-test" />
-        <module name="PalindromeNumber-test" />
         <module name="StringTransformer-test" />
         <module name="SortedArray2BST" />
         <module name="ZerosToEnd" />
         <module name="PrimeDistanceFinder-test" />
-        <module name="NonPrimeSprialMatrixCreator-test" />
         <module name="ElementSum-test" />
         <module name="palindrome" />
         <module name="IntervalMerger-test" />
