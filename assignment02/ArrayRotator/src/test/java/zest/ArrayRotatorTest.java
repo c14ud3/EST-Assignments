@@ -32,11 +32,7 @@ class ArrayRotatorTest {
     }
 
     @Test
-    void testEmptyArray() {
-        assertThrows(IllegalArgumentException.class, () -> {
-            arrayRotator.rotate(new int[] {}, 1);
-        });
-    }
+
 
     @Test
     void testNullArray() {

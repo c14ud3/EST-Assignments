@@ -11,6 +11,8 @@ public class ExcelSheet {
     public int titleToNumber(String columnTitle) {
         int result = 0;
         int length = columnTitle.length();
+        if (length > 7 || length == 0) throw new IllegalArgumentException("Column titel must be atleast 1 and at most 7 characters long");
+        if (!columnTitle.matches("[A-Z]+")) throw new IllegalArgumentException("Column title must contain only english uppercase letters");
 
         for (int i = 0; i < length; i++) {
             char currentChar = columnTitle.charAt(i);

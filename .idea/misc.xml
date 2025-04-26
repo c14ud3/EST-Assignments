@@ -16,6 +16,18 @@
         <option value="$PROJECT_DIR$/assignment01/ParenthesesValidator/pom.xml" />
         <option value="$PROJECT_DIR$/assignment01/ConsecutiveElementSum/pom.xml" />
         <option value="$PROJECT_DIR$/assignment01/NonPrimeSpiralMatrixCreator/pom.xml" />
+        <option value="$PROJECT_DIR$/assignment02/ArrayRotator/pom.xml" />
+        <option value="$PROJECT_DIR$/assignment02/BinaryTreeMaxPath/pom.xml" />
+        <option value="$PROJECT_DIR$/assignment02/BitwiseSumCalculator/pom.xml" />
+        <option value="$PROJECT_DIR$/assignment02/ClimbingStairs/pom.xml" />
+        <option value="$PROJECT_DIR$/assignment02/CourseSchedule/pom.xml" />
+        <option value="$PROJECT_DIR$/assignment02/ExcelSheet/pom.xml" />
+        <option value="$PROJECT_DIR$/assignment02/LCP/pom.xml" />
+        <option value="$PROJECT_DIR$/assignment02/RepetitiveCharFinder/pom.xml" />
+        <option value="$PROJECT_DIR$/assignment02/RomanToInteger/pom.xml" />
+        <option value="$PROJECT_DIR$/assignment02/SortedArray2BST/pom.xml" />
+        <option value="$PROJECT_DIR$/assignment02/TwoSum/pom.xml" />
+        <option value="$PROJECT_DIR$/assignment02/ZerosToEnd/pom.xml" />
       </list>
     </option>
   </component>
