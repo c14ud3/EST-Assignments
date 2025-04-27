@@ -37,7 +37,7 @@ For the preconditions, we created the following test cases: `testEmptyArray`, `t
 ## Task 4: Property-Based Testing
 To test the properties that are based on the defined contracts, we came up with the following test cases with the jqwik outputs:
 
-`testPropertyRotationCountPass`:
+`testPropertyRotationCountPass`: Here, we are testing the rotated array using a random integer.
 ```text
 timestamp = 2025-04-15T12:14:32.197641, ArrayRotatorTest:testPropertyRotationCountPass = 
                               |-----------------------jqwik-----------------------
@@ -53,7 +53,7 @@ seed = 326612050322462684     | random seed to reproduce generated values
 ```
 
 
-`testPropertyRotationCountFail`:
+`testPropertyRotationCountFail`: Here, we use a invalid rotation count.
 ```text
 timestamp = 2025-04-15T12:14:32.179961, ArrayRotatorTest:testPropertyRotationCountFail = 
                               |-----------------------jqwik-----------------------
@@ -68,7 +68,7 @@ edge-cases#tried = 4          | # of edge cases tried in current run
 seed = 3040600388700866025    | random seed to reproduce generated values
 ```
 
-`testPropertyOriginalArrayPass`.
+`testPropertyOriginalArrayPass`: Here, we create an array with 3 arbitrary integers and rotate it by 1.
 ```text
 timestamp = 2025-04-15T12:14:32.219001, ArrayRotatorTest:testPropertyOriginalArrayPass = 
                               |-----------------------jqwik-----------------------

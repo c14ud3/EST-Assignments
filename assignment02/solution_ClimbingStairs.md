@@ -2,7 +2,7 @@
 
 ## Task 1: Code Coverage
 
-To test the implementation, we go a working recursive approach from [GeeksForGeeks](https://www.geeksforgeeks.org/count-ways-reach-nth-stair/) in `ClimbingStairsTest.climbStairs()` and tested the real implementation with the test functions `testSimpleExamples`, we already received full line coverage.
+To test the implementation, we got a working recursive approach from [GeeksForGeeks](https://www.geeksforgeeks.org/count-ways-reach-nth-stair/) in `ClimbingStairsTest.climbStairs()` and tested the real implementation with the test function `testSimpleExamples`. Doing so, we already received full line coverage.
 
 
 ## Task 2: Designing Contracts
@@ -12,7 +12,7 @@ Identified preconditions:
 Identified postconditions:
 - The output is the number of steps
 
-We wanted to implement the preconditionsthe following way:
+We wanted to implement the preconditions the following way:
 
 We implemented a precondition check:
 
@@ -31,7 +31,7 @@ Regarding the postcondition, we do this later in a property-based test, since th
 ## Task 4: Property-Based Testing
 We implemented the following tests:
 
-`testPropertyNegativeOrZeroInputs`:
+`testPropertyNegativeOrZeroInputs`: Here we test negative inputs (incl. 0) -> throws IllegalArgumentException
 ```text
 timestamp = 2025-04-17T11:24:03.311859, ClimbingStairsTest:testPropertyNegativeOrZeroInputs = 
                               |-----------------------jqwik-----------------------
@@ -46,7 +46,7 @@ edge-cases#tried = 5          | # of edge cases tried in current run
 seed = -6087338161732748667   | random seed to reproduce generated values
 ```
 
-`testPropertyPositiveInputs`:
+`testPropertyPositiveInputs`: Here we test positive inputs -> we compare the returned number with our trusted implementation
 ```text
 timestamp = 2025-04-17T11:24:29.081714, ClimbingStairsTest:testPropertyPositiveInputs = 
                               |-----------------------jqwik-----------------------

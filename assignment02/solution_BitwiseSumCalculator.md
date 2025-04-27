@@ -24,7 +24,7 @@ if (b > Integer.MAX_VALUE || b < Integer.MIN_VALUE)
 ```
 However, this doesn't really makes sense, since integers in Java are per default 32 bit signed integers (see [here](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Integer.html)) Thus, we didn't do this implementation.
 
-We didn't implement the postcondition, since this would require to calculate the sum again by `int sum = a + b;` and thus, we would do the whole work twice, which just doesn't make sense.
+We didn't implement the postcondition, since this would require to calculate the sum again by `int sum = a + b;` and thus, we would do the whole work twice, which just isn't necessary.
 
 
 ## Task 3: Testing Contracts

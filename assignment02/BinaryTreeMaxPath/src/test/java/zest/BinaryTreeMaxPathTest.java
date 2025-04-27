@@ -2,7 +2,6 @@ package zest;
 
 
 import net.jqwik.api.*;
-import net.jqwik.api.constraints.IntRange;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -92,7 +91,7 @@ public class BinaryTreeMaxPathTest {
     }
 
     @Property
-    void testPropertyRotationCountFail(
+    void testLeftChildTree(
             @ForAll("positiveNumberInRange") int number1,
             @ForAll("positiveNumberInRange") int number2,
             @ForAll("positiveNumberInRange") int number3,
@@ -118,5 +117,27 @@ public class BinaryTreeMaxPathTest {
         return Arbitraries.integers()
                 .lessOrEqual(10000)
                 .greaterOrEqual(1);
+    }
+
+    // Here, we check that the maximum path sum is at least the maximum node value
+    @Property
+    void maxPathSumAtLeastMaxNodeValue(@ForAll("trees") List<Integer> tree) {
+        tree.add(1); // to ensure that at least one node is positive
+
+        int maxSum = getMaxPathSumFromArray(tree.toArray(new Integer[tree.size()]));
+
+        int maxNodeValue = 0;
+        for (Integer nodeValue : tree) {
+            if (nodeValue != null && nodeValue > maxNodeValue) {
+                maxNodeValue = nodeValue;
+            }
+        }
+
+        assertTrue(maxSum >= maxNodeValue);
+    }
+
+    @Provide
+    Arbitrary<List<Integer>> trees() {
+        return Arbitraries.integers().between(-10000, 10000).list();
     }
 }
