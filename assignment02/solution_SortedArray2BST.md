@@ -77,3 +77,42 @@ We created a property test called `testSortedArrayToBST_BSTProperty` to verify t
 3) The BST represented in the list is height-balanced.
 
 We created a property test called `testSortedArrayToBST_Balanced` to check this. Again, we used the same provider method as above. We created an external method that checks if there are no null values within the first half of the output list (which corresponds to all the non-leaf nodes).
+```
+timestamp = 2025-04-27T11:02:44.169547, SortedArray2BSTPropertyTest:testSortedArrayToBST BSTProperty = 
+                              |-----------------------jqwik-----------------------
+tries = 1000                  | # of calls to property
+checks = 1000                 | # of not rejected calls
+generation = RANDOMIZED       | parameters are randomly generated
+after-failure = SAMPLE_FIRST  | try previously failed sample, then previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 9          | # of all combined edge cases
+edge-cases#tried = 9          | # of edge cases tried in current run
+seed = 2016560431997019328    | random seed to reproduce generated values
+
+
+timestamp = 2025-04-27T11:02:44.250071500, SortedArray2BSTPropertyTest:testSortedArrayToBST AllElementsContained = 
+                              |-----------------------jqwik-----------------------
+tries = 1000                  | # of calls to property
+checks = 1000                 | # of not rejected calls
+generation = RANDOMIZED       | parameters are randomly generated
+after-failure = SAMPLE_FIRST  | try previously failed sample, then previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 9          | # of all combined edge cases
+edge-cases#tried = 9          | # of edge cases tried in current run
+seed = -3923392400926425813   | random seed to reproduce generated values
+
+
+timestamp = 2025-04-27T11:02:44.317391600, SortedArray2BSTPropertyTest:testSortedArrayToBST Balanced = 
+                              |-----------------------jqwik-----------------------
+tries = 1000                  | # of calls to property
+checks = 1000                 | # of not rejected calls
+generation = RANDOMIZED       | parameters are randomly generated
+after-failure = SAMPLE_FIRST  | try previously failed sample, then previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 9          | # of all combined edge cases
+edge-cases#tried = 9          | # of edge cases tried in current run
+seed = 228839306571112709     | random seed to reproduce generated values
+```

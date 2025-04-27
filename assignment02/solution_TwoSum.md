@@ -65,5 +65,18 @@ This is also easy to check using a simple assert statement.
 This can also be checked using a simple assert statement.
 
 We created a provider method that provides an array of integers of a maximum size of 100 and which contains distinct integers between -50 and 50. To create the distinct integers, we applied a trick to let Jqwik generate a set first (that naturally contains distinct values) and then convert it to the array. We also provide the target value such that it ranges from -50 to 50. We made this decision to limit the integer values, because it is more likely that an input array and target value are randomly generated that actually lead to a result and not always trigger the error message that no result is found.
+```
+timestamp = 2025-04-27T11:04:52.636892700, TwoSumPropertyTest:testTwoSumWithValidInputs = 
+                              |-----------------------jqwik-----------------------
+tries = 1000                  | # of calls to property
+checks = 1000                 | # of not rejected calls
+generation = RANDOMIZED       | parameters are randomly generated
+after-failure = SAMPLE_FIRST  | try previously failed sample, then previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 0          | # of all combined edge cases
+edge-cases#tried = 0          | # of edge cases tried in current run
+seed = 289888879321497575     | random seed to reproduce generated values
+```
 
 

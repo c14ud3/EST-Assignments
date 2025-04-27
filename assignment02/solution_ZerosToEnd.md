@@ -65,3 +65,42 @@ For this property, we provide an array with random integers of a maximum length 
 
 To test this property, we decided to provide an array of a maximum length of 10 that includes only 0s and 1s to increase the likelyhood that several 0s are included. We then call the `moveZerosToEnd()` method and check if the number of zeros in the result array is equal to the number of zeros in the input array. If yes, the test passes.
 
+```
+timestamp = 2025-04-27T11:05:48.899532200, ZerosToEndPropertyTest:testZerosMovedToEnd = 
+                              |-----------------------jqwik-----------------------
+tries = 1000                  | # of calls to property
+checks = 1000                 | # of not rejected calls
+generation = RANDOMIZED       | parameters are randomly generated
+after-failure = SAMPLE_FIRST  | try previously failed sample, then previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 9          | # of all combined edge cases
+edge-cases#tried = 9          | # of edge cases tried in current run
+seed = -584807422421904895    | random seed to reproduce generated values
+
+
+timestamp = 2025-04-27T11:05:48.988064, ZerosToEndPropertyTest:testNonZeroOrderPreserved = 
+                              |-----------------------jqwik-----------------------
+tries = 1000                  | # of calls to property
+checks = 1000                 | # of not rejected calls
+generation = RANDOMIZED       | parameters are randomly generated
+after-failure = SAMPLE_FIRST  | try previously failed sample, then previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 10         | # of all combined edge cases
+edge-cases#tried = 10         | # of edge cases tried in current run
+seed = -8993927157057374942   | random seed to reproduce generated values
+
+
+timestamp = 2025-04-27T11:05:49.035583800, ZerosToEndPropertyTest:testSameNumberOfZeros = 
+                              |-----------------------jqwik-----------------------
+tries = 1000                  | # of calls to property
+checks = 1000                 | # of not rejected calls
+generation = RANDOMIZED       | parameters are randomly generated
+after-failure = SAMPLE_FIRST  | try previously failed sample, then previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 10         | # of all combined edge cases
+edge-cases#tried = 10         | # of edge cases tried in current run
+seed = 1503268178114680629    | random seed to reproduce generated values
+```

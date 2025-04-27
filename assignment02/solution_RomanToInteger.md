@@ -34,3 +34,30 @@ To test this property, we created a provider function that creates a valid roman
 2) If the input roman digit is larger, the resulting integer must also be larger.
 
 We test this property inside the `testRomanToIntegerProportionality()` test case. We use another provider method to generate a valid roman number, but in this case in the range [1, 3999], meaning that it containst at least one roman digit. We call the `romanToInteger()` twice: Once with the provided roman number as input, and once with the same roman number, but with the last roman digit removed, which guarantees that this resulting roman number is smaller than the previous one. We then check that the integer result of the first call is greater than the integer result of the second call. If this is not the case, the test fails.
+
+```
+timestamp = 2025-04-27T11:03:57.490066100, RomanToIntegerPropertyTest:testRomanToIntegerValidInputValidOutputRange = 
+                              |-----------------------jqwik-----------------------
+tries = 1000                  | # of calls to property
+checks = 1000                 | # of not rejected calls
+generation = RANDOMIZED       | parameters are randomly generated
+after-failure = SAMPLE_FIRST  | try previously failed sample, then previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 16         | # of all combined edge cases
+edge-cases#tried = 16         | # of edge cases tried in current run
+seed = -4325609074230945382   | random seed to reproduce generated values
+
+
+timestamp = 2025-04-27T11:03:57.543605300, RomanToIntegerPropertyTest:testRomanToIntegerProportionality = 
+                              |-----------------------jqwik-----------------------
+tries = 1000                  | # of calls to property
+checks = 1000                 | # of not rejected calls
+generation = RANDOMIZED       | parameters are randomly generated
+after-failure = SAMPLE_FIRST  | try previously failed sample, then previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 15         | # of all combined edge cases
+edge-cases#tried = 15         | # of edge cases tried in current run
+seed = -5270124281404116480   | random seed to reproduce generated values
+```
