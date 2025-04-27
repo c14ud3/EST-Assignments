@@ -18,8 +18,8 @@ class ExcelSheetTest {
 
     @ParameterizedTest
     @MethodSource("simpleExamples")
-    void testSimpleExamples(String input, int expected) {
-        int actual = excelSheet.titleToNumber(input);
+    void testSimpleExamples(String input, long expected) {
+        long actual = excelSheet.titleToNumber(input);
         assertEquals(expected, actual);
     }
 
@@ -53,5 +53,37 @@ class ExcelSheetTest {
 
         });
     }
-}
 
+    @Property
+    void testPropertyColumnTitlePass(
+            @ForAll("validColumnTitles") String columnTitle
+    ) {
+        long actual = excelSheet.titleToNumber(columnTitle);
+        assertTrue(actual > 0);
+    }
+
+    @Provide
+    private Arbitrary<String> validColumnTitles() {
+        return Arbitraries.strings()
+                .ofLength(7)
+                .withChars('A', 'B', 'C', 'Z')
+                .filter(title -> title.matches("[A-Z]+"));
+    }
+
+    @Property
+    void testPropertyColumnTitleFail(
+            @ForAll("invalidColumnTitles") String columnTitle
+    ) {
+        assertThrows(IllegalArgumentException.class, () -> {
+            excelSheet.titleToNumber(columnTitle);
+        });
+    }
+
+    @Provide
+    private Arbitrary<String> invalidColumnTitles() {
+        return Arbitraries.strings()
+                .ofLength(7)
+                .withChars('1', '2', '3', '4', '5')
+                .filter(title -> !title.matches("[A-Z]+"));
+    }
+}

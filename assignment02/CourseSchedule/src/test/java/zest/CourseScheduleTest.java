@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
+import pitest.fasterxml.jackson.databind.annotation.JsonAppend;
 
 import java.util.Arrays;
 import java.util.stream.Stream;
@@ -51,7 +52,7 @@ class CourseScheduleTest {
     @Test
     void testCourseLarger64(){
         assertThrows(IllegalArgumentException.class, () -> {
-            scheduler.canFinish(70, new int[][] {});
+            scheduler.canFinish(65, new int[][] {});
         });
     }
 
@@ -89,5 +90,58 @@ class CourseScheduleTest {
             scheduler.canFinish(2, new int[][] {{1}});
         });
     }
-    
+
+    @Property
+    void testPropertyNumCoursesPass(
+            @ForAll @IntRange(min = 1, max = 64) int numCourses
+    ) {
+        int[][] prerequisites = new int[][] {};
+        boolean actual = scheduler.canFinish(numCourses, prerequisites);
+        assertTrue(actual);
+    }
+
+    @Property
+    void testPropertyNumCoursesFail(
+            @ForAll("numCoursesGreaterThan64") int numCourses
+    ) {
+        assertThrows(IllegalArgumentException.class, () -> {
+            int[][] prerequisites = new int[][] {};
+            scheduler.canFinish(numCourses, prerequisites);
+        });
+    }
+
+    @Provide
+    Arbitrary<Integer> numCoursesGreaterThan64() {
+        return Arbitraries.integers().greaterOrEqual(65);
+    }
+
+    @Property
+    void testPropertyPrerequisitesPass(
+            @ForAll("validPrerequisites") int[][] prerequisites
+    ) {
+        int numCourses = 64;
+        boolean actual = scheduler.canFinish(numCourses, prerequisites);
+        assertTrue(actual);
+    }
+
+    @Provide
+    Arbitrary<int[][]> validPrerequisites() {
+        return Arbitraries.integers().between(1, 63).map(i -> new int[][] {{i, i-1}});
+    }
+
+    @Property
+    void testPropertyPrerequisitesFail(
+            @ForAll("invalidPrerequisites") int[][] prerequisites
+    ) {
+        assertThrows(IllegalArgumentException.class, () -> {
+            int numCourses = 64;
+            scheduler.canFinish(numCourses, prerequisites);
+        });
+    }
+
+    @Provide
+    Arbitrary<int[][]> invalidPrerequisites() {
+        return Arbitraries.integers().between(1, 63).map(i -> new int[][] {{i}});
+    }
 }
+// Compare this snippet from assignment02/ArrayRotator/src/main/java/zest/ArrayRotator.jav

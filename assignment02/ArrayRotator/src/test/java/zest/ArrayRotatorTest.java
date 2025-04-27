@@ -32,9 +32,6 @@ class ArrayRotatorTest {
     }
 
     @Test
-
-
-    @Test
     void testNullArray() {
         assertThrows(IllegalArgumentException.class, () -> {
             arrayRotator.rotate(null, 1);

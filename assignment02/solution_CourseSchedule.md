@@ -33,26 +33,24 @@ For the preconditions, we created the following test cases: `testEmptyArray`, `t
 ## Task 4: Property-Based Testing
 To test the properties that are based on the defined contracts, we came up with the following test cases with the jqwik outputs:
 
-`testPropertyRotationCountPass`:
+`testPropertyNumCoursesPass`:
 ```text
-timestamp = 2025-04-15T12:14:32.197641, ArrayRotatorTest:testPropertyRotationCountPass = 
+timestamp = 2025-04-26T22:35:27.117552600, CourseScheduleTest:testPropertyNumCoursesPass = 
                               |-----------------------jqwik-----------------------
-tries = 1000                  | # of calls to property
-checks = 1000                 | # of not rejected calls
-generation = RANDOMIZED       | parameters are randomly generated
+tries = 64                    | # of calls to property
+checks = 64                   | # of not rejected calls
+generation = EXHAUSTIVE       | parameters are exhaustively generated
 after-failure = SAMPLE_FIRST  | try previously failed sample, then previous seed
 when-fixed-seed = ALLOW       | fixing the random seed is allowed
 edge-cases#mode = MIXIN       | edge cases are mixed in
-edge-cases#total = 5          | # of all combined edge cases
-edge-cases#tried = 5          | # of edge cases tried in current run
-seed = 326612050322462684     | random seed to reproduce generated values
+edge-cases#total = 0          | # of all combined edge cases
+edge-cases#tried = 0          | # of edge cases tried in current run
+seed = -4564189970503427436   | random seed to reproduce generated values
 ```
 
 
-`testPropertyRotationCountFail`:
+`testPropertyNumCoursesFail`:
 ```text
-timestamp = 2025-04-15T12:14:32.179961, ArrayRotatorTest:testPropertyRotationCountFail = 
-                              |-----------------------jqwik-----------------------
 tries = 1000                  | # of calls to property
 checks = 1000                 | # of not rejected calls
 generation = RANDOMIZED       | parameters are randomly generated
@@ -61,20 +59,35 @@ when-fixed-seed = ALLOW       | fixing the random seed is allowed
 edge-cases#mode = MIXIN       | edge cases are mixed in
 edge-cases#total = 4          | # of all combined edge cases
 edge-cases#tried = 4          | # of edge cases tried in current run
-seed = 3040600388700866025    | random seed to reproduce generated values
+seed = 1675367955210159867    | random seed to reproduce generated values
 ```
 
-`testPropertyOriginalArrayPass`.
+`testPropertyPrerequisitesPass`.
 ```text
-timestamp = 2025-04-15T12:14:32.219001, ArrayRotatorTest:testPropertyOriginalArrayPass = 
+timestamp = 2025-04-26T22:54:28.530039600, CourseScheduleTest:testPropertyPrerequisitesPass = 
                               |-----------------------jqwik-----------------------
-tries = 1000                  | # of calls to property
-checks = 1000                 | # of not rejected calls
-generation = RANDOMIZED       | parameters are randomly generated
+tries = 64                    | # of calls to property
+checks = 64                   | # of not rejected calls
+generation = EXHAUSTIVE       | parameters are exhaustively generated
 after-failure = SAMPLE_FIRST  | try previously failed sample, then previous seed
 when-fixed-seed = ALLOW       | fixing the random seed is allowed
 edge-cases#mode = MIXIN       | edge cases are mixed in
-edge-cases#total = 125        | # of all combined edge cases
-edge-cases#tried = 123        | # of edge cases tried in current run
-seed = 3895997453398465285    | random seed to reproduce generated values
+edge-cases#total = 0          | # of all combined edge cases
+edge-cases#tried = 0          | # of edge cases tried in current run
+seed = 7186578156850836365    | random seed to reproduce generated values
+```
+
+`testPropertyPrerequisitesFail`:
+```text
+timestamp = 2025-04-26T23:06:13.388781500, CourseScheduleTest:testPropertyPrerequisitesFail = 
+                              |-----------------------jqwik-----------------------
+tries = 64                    | # of calls to property
+checks = 64                   | # of not rejected calls
+generation = EXHAUSTIVE       | parameters are exhaustively generated
+after-failure = SAMPLE_FIRST  | try previously failed sample, then previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 0          | # of all combined edge cases
+edge-cases#tried = 0          | # of edge cases tried in current run
+seed = -4076156215522254136   | random seed to reproduce generated values
 ```
