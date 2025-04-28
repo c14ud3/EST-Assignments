@@ -91,6 +91,7 @@ class CourseScheduleTest {
         });
     }
 
+    //Number of courses between 1 and 64
     @Property
     void testPropertyNumCoursesPass(
             @ForAll @IntRange(min = 1, max = 64) int numCourses
@@ -100,6 +101,7 @@ class CourseScheduleTest {
         assertTrue(actual);
     }
 
+    //Number of courses greater than 64
     @Property
     void testPropertyNumCoursesFail(
             @ForAll("numCoursesGreaterThan64") int numCourses
@@ -115,6 +117,7 @@ class CourseScheduleTest {
         return Arbitraries.integers().greaterOrEqual(65);
     }
 
+    //Prerequisites are valid and not unreachable
     @Property
     void testPropertyPrerequisitesPass(
             @ForAll("validPrerequisites") int[][] prerequisites
@@ -129,6 +132,7 @@ class CourseScheduleTest {
         return Arbitraries.integers().between(1, 63).map(i -> new int[][] {{i, i-1}});
     }
 
+    //Invalid prerequisites with only on int in the array
     @Property
     void testPropertyPrerequisitesFail(
             @ForAll("invalidPrerequisites") int[][] prerequisites
@@ -144,4 +148,3 @@ class CourseScheduleTest {
         return Arbitraries.integers().between(1, 63).map(i -> new int[][] {{i}});
     }
 }
-// Compare this snippet from assignment02/ArrayRotator/src/main/java/zest/ArrayRotator.jav

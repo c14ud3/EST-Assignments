@@ -13,7 +13,8 @@ Identified preconditions:
 
 
 Identified postconditions:
-- None that java has not already implemented with types.
+- If one of the input strings is empty, an exception should be thrown, that a non-empty string should be passed.
+
 
 These pre- and post- conditions then have been implemented:
 
@@ -29,12 +30,13 @@ for (int i = 0; i < strs.length; i++) {
 
 ## Task 3: Testing Contracts
 
-For the preconditions, we created the following test cases: `testColumnTitleEmpty`, `testColumnTitleTooLong`, `TestColumnTitleInt`.
+For the pre- and post-conditions, we created the following test cases: `testSingleString`, and used further fron `testSimpleExamples`.
 
 ## Task 4: Property-Based Testing
 To test the properties that are based on the defined contracts, we came up with the following test cases with the jqwik outputs:
 
 `testPropertyLCPPass`:
+We tested for valid strings where common prefixes exist. Using a helper function the property test first generates the random string, and then using a helper function computes the longest common prefix. The test then checks if the output of the function is equal to the computed longest common prefix.
 ```text
 timestamp = 2025-04-27T08:30:51.340009, LongestCommonPrefixTest:testPropertyLCP = 
                               |-----------------------jqwik-----------------------
@@ -51,6 +53,7 @@ seed = 1448473376273348398    | random seed to reproduce generated values
 
 
 `testPropertyLCPFail`:
+We tested for invalid strings where atleast one is an empty string giving an exception. The test checks if the exception is thrown when the input is an empty string.
 ```text
 timestamp = 2025-04-27T08:32:58.393161300, LongestCommonPrefixTest:testPropertyLCPFail = 
                               |-----------------------jqwik-----------------------

@@ -40,9 +40,9 @@ class LongestCommonPrefixTest {
         assertEquals(expected, actual);
     }
 
+    //Valid strings with common prefixes
     @Property
     void testPropertyLCPPass(@ForAll("validStringArrays") String[] input) {
-        // Berechne die erwartete Ausgabe basierend auf der Eingabe
         String expected = calculateExpectedLCP(input);
         String actual = lcp.lcp(input);
         assertEquals(expected, actual);
@@ -60,6 +60,7 @@ class LongestCommonPrefixTest {
                 .map(list -> list.toArray(new String[0]));
     }
 
+    //Invalid strings with null elements
     @Property
     void testPropertyLCPFail(@ForAll("invalidStringArrays") String[] input) {
         assertThrows(IllegalArgumentException.class, () -> {
@@ -76,7 +77,6 @@ class LongestCommonPrefixTest {
                 .ofMaxSize(10)
                 .map(list -> {
                     String[] array = list.toArray(new String[0]);
-                    // Füge ein null-Element hinzu
                     array[array.length - 1] = null;
                     return array;
                 });

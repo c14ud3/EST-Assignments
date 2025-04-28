@@ -43,17 +43,18 @@ class RepetitiveCharFinderTest {
     @Test
     void testEmptyInput() {
         List<Character> result = finder.findNonUniqueCharacters("");
-        assertTrue(result.isEmpty(), "Expected empty list for empty input");
+        assertTrue(result.isEmpty());
     }
 
+    //Test for input with non-unique characters.
     @Property
     void testPropertyNonUniqueCharacters(
             @ForAll("nonUniqueStrings") String input
     ) {
         List<Character> result = finder.findNonUniqueCharacters(input);
-        assertFalse(result.isEmpty(), "Expected non-empty list for non-unique characters");
+        assertFalse(result.isEmpty());
         for (Character c : result) {
-            assertTrue(input.indexOf(c) != input.lastIndexOf(c), "Expected character to be non-unique");
+            assertTrue(input.indexOf(c) != input.lastIndexOf(c));
         }
     }
 
@@ -64,12 +65,13 @@ class RepetitiveCharFinderTest {
                 .map(s -> s + s.charAt(0)); // Ensures at least one non-unique character
     }
 
+    //Input with distinct characters
     @Property
     void testPropertyUniqueCharacters(
             @ForAll("uniqueStrings") String input
     ) {
         List<Character> result = finder.findNonUniqueCharacters(input);
-        assertTrue(result.isEmpty(), "Expected empty list for unique characters");
+        assertTrue(result.isEmpty());
     }
 
     @Provide

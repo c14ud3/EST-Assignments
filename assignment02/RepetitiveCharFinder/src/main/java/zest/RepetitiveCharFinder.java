@@ -12,6 +12,9 @@ public class RepetitiveCharFinder {
      * @return a list of repeated characters
      */
     public static List<Character> findNonUniqueCharacters(String input) {
+        if (input == null) {
+            throw new IllegalArgumentException("Input string cannot be null");
+        }
 
         Map<Character, Integer> characterCounts = new LinkedHashMap<>(); // Preserves insertion order
         List<Character> nonUniqueCharacters = new ArrayList<>();

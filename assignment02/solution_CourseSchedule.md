@@ -1,4 +1,4 @@
-# ArrayRotator
+# Course Schedule
 
 ## Task 1: Code Coverage
 
@@ -28,12 +28,13 @@ for (int i = 0; i<prerequisites.length; i++) {
 
 ## Task 3: Testing Contracts
 
-For the preconditions, we created the following test cases: `testEmptyArray`, `testNullArray`, `testNegativeRotationCount`.
+For the preconditions, we created the following test cases: `testCoursesZero`, `testCoursesNegative`, `testCourseLarger64` `testPrerequisitesLarger64`, `testValidPrerequisites`, `testPrerequisitesNegative`, `testPrerequisitesLargerNumCourses`, `testPrerequisitesUnderflow`.
 
 ## Task 4: Property-Based Testing
 To test the properties that are based on the defined contracts, we came up with the following test cases with the jqwik outputs:
 
 `testPropertyNumCoursesPass`:
+We tested the property that the number of courses is between 1 and 64, and that the prerequisites are between 0 and numCourses -1. 
 ```text
 timestamp = 2025-04-26T22:35:27.117552600, CourseScheduleTest:testPropertyNumCoursesPass = 
                               |-----------------------jqwik-----------------------
@@ -50,6 +51,7 @@ seed = -4564189970503427436   | random seed to reproduce generated values
 
 
 `testPropertyNumCoursesFail`:
+We tested the property, that the numcourses are invalid and larger than 64.
 ```text
 tries = 1000                  | # of calls to property
 checks = 1000                 | # of not rejected calls
@@ -63,6 +65,7 @@ seed = 1675367955210159867    | random seed to reproduce generated values
 ```
 
 `testPropertyPrerequisitesPass`.
+We tested the property that the prerequisites are valid. The prerequisites were set to be less than numCourses -1 and larger than 0, and [i, i-1] pairs.
 ```text
 timestamp = 2025-04-26T22:54:28.530039600, CourseScheduleTest:testPropertyPrerequisitesPass = 
                               |-----------------------jqwik-----------------------
@@ -78,6 +81,7 @@ seed = 7186578156850836365    | random seed to reproduce generated values
 ```
 
 `testPropertyPrerequisitesFail`:
+We tested the property that the prerequisites are invalid. The prerequisites were invalid since only one int was in the array.
 ```text
 timestamp = 2025-04-26T23:06:13.388781500, CourseScheduleTest:testPropertyPrerequisitesFail = 
                               |-----------------------jqwik-----------------------

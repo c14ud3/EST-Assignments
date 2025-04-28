@@ -54,6 +54,7 @@ class ExcelSheetTest {
         });
     }
 
+    //Valid inputs with A, B, C and Z and no longer than 7 characters
     @Property
     void testPropertyColumnTitlePass(
             @ForAll("validColumnTitles") String columnTitle
@@ -70,6 +71,7 @@ class ExcelSheetTest {
                 .filter(title -> title.matches("[A-Z]+"));
     }
 
+    //Invalid inputs built with integers.
     @Property
     void testPropertyColumnTitleFail(
             @ForAll("invalidColumnTitles") String columnTitle

@@ -30,6 +30,7 @@ To test the properties that are based on the defined contracts, we came up with 
 While testing, we found a bug, where numbers larger than the MAX_INTEGER are not handled correctly. We fixed this by adapting the function to long type instead of an int.
 
 `testPropertyColumnTitlePass`:
+We tested for valid inputs containing A, B, C and Z and no longer than 7 characters.
 ```text
 timestamp = 2025-04-27T08:23:13.352869400, ExcelSheetTest:testPropertyColumnTitlePass = 
                               |-----------------------jqwik-----------------------
@@ -46,6 +47,7 @@ seed = 9212502069760161830    | random seed to reproduce generated values
 
 
 `testPropertyColumnTitleFail`:
+We tested for invalid inputs containing integers
 ```text
 timestamp = 2025-04-27T08:24:05.845411600, ExcelSheetTest:testPropertyColumnTitleFail = 
                               |-----------------------jqwik-----------------------
