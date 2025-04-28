@@ -61,6 +61,7 @@ class ClimbingStairsTest {
         });
     }
 
+    // Here we test negative inputs (incl. 0) -> throws IllegalArgumentException
     @Property
     void testPropertyNegativeOrZeroInputs(
             @ForAll("negativeNumbers") int n
@@ -75,6 +76,7 @@ class ClimbingStairsTest {
         return Arbitraries.integers().lessOrEqual(0);
     }
 
+    // Here we test positive inputs -> we compare the returned number with our trusted implementation
     @Property
     void testPropertyPositiveInputs(
             @ForAll("positiveNumbers") int n

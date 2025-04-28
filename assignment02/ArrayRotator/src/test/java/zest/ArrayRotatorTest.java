@@ -45,6 +45,7 @@ class ArrayRotatorTest {
         });
     }
 
+    // Rotate the array by an arbitrary integer
     @Property
     void testPropertyRotationCountPass(
             @ForAll @IntRange(min = 0) int rotationCount
@@ -55,6 +56,7 @@ class ArrayRotatorTest {
         assertArrayEquals(originalArray, returnedArray);
     }
 
+    // Rotate the array by an invalid integer
     @Property
     void testPropertyRotationCountFail(
             @ForAll("invalidRotationCounts") int rotationCount
@@ -68,6 +70,7 @@ class ArrayRotatorTest {
         return Arbitraries.integers().lessOrEqual(-1);
     }
 
+    // Rotate an arbitrary array by 1
     @Property
     void testPropertyOriginalArrayPass(
             @ForAll @IntRange() int int1,
