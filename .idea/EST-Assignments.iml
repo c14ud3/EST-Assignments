@@ -1,9 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" inherit-compiler-output="true">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_21" inherit-compiler-output="true">
     <exclude-output />
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/assignment02/ArrayRotator/src/main" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/assignment02/ArrayRotator/src/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/assignment02/BinaryTreeMaxPath/src/main" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/assignment02/BinaryTreeMaxPath/src/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/assignment02/BitwiseSumCalculator/src/main" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/assignment02/BitwiseSumCalculator/src/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/assignment02/ClimbingStairs/src/main" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/assignment02/ClimbingStairs/src/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/assignment02/CourseSchedule/src/main" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/assignment02/CourseSchedule/src/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/assignment02/ExcelSheet/src/main" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/assignment02/ExcelSheet/src/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/assignment02/LCP/src/main" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/assignment02/LCP/src/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/assignment02/RepetitiveCharFinder/src/main" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/assignment02/RepetitiveCharFinder/src/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/assignment02/RomanToInteger/src/main" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/assignment02/RomanToInteger/src/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/assignment02/SortedArray2BST/src/main" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/assignment02/SortedArray2BST/src/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/assignment02/TwoSum/src/main" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/assignment02/TwoSum/src/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/assignment02/ZerosToEnd/src/main" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/assignment02/ZerosToEnd/src/test" isTestSource="true" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-params:5.9.3" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-api:5.9.3" level="project" />
   </component>
 </module>

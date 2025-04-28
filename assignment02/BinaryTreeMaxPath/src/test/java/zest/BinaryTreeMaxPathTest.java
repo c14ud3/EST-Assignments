@@ -1,4 +1,4 @@
-package zest;
+package java.zest;
 
 
 import net.jqwik.api.*;

@@ -6,9 +6,14 @@ import java.util.Arrays;
 public class LongestCommonPrefix {
 
     public String lcp(String[] strs) {
-
         if (strs.length == 1) {
+            if (strs[0] == null) throw new IllegalArgumentException("Please enter a non-empty string");
             return strs[0];
+        }
+
+        if (strs.length == 0) throw new IllegalArgumentException("Please enter atleast 1 string");
+        for (int i = 0; i < strs.length; i++) {
+            if (strs[i] == null) throw new IllegalArgumentException("Please enter a non-empty string");
         }
 
         String prefix = strs[0];
