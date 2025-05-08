@@ -8,17 +8,27 @@ public class MovieRatings {
         this.fetcher = fetcher;
     }
 
-    public MovieRatings() {
-        DatabaseConnection dbConnection = new DatabaseConnection();
-        this.fetcher = new MovieRatingsFetcher(dbConnection);
+    public List<Movie> topRatedMovies() {
+        return getMovies(true);
     }
 
-    public List<Movie> topRatedMovies() {
+    public List<String> uniqueDirectors() {
+        List<Movie> movies= getMovies(true);
+        return movies.stream()
+                .map(Movie::getDirector)
+                .distinct()
+                .collect(Collectors.toList());
+    }
+    private List<Movie> getMovies(boolean topRated) {
         try {
             List<Movie> allMovies = fetcher.all();
-            return allMovies.stream()
-                    .filter(movie -> movie.getRating() >= 4)
-                    .collect(Collectors.toList());
+            if (topRated) {
+                return allMovies.stream()
+                        .filter(movie -> movie.getRating() >= 4)
+                        .collect(Collectors.toList());
+            } else {
+                return allMovies;
+            }
         } finally {
             fetcher.close();
         }

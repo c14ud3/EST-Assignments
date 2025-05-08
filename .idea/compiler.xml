@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="EmailNotificationSystem" />
         <module name="PatternEncoder-test" />
         <module name="ArrayRotator" />
         <module name="PalindromeNumber-test" />
@@ -28,6 +29,7 @@
         <module name="PrimeDistanceFinder-test" />
         <module name="NonPrimeSprialMatrixCreator-test" />
         <module name="climbing-stairs" />
+        <module name="MovieRatings" />
         <module name="ArrayElementSwapper-test" />
         <module name="LCP" />
         <module name="IEventScheduler-test" />
