@@ -6,22 +6,34 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="EmailNotificationSystem" />
+        <module name="PatternEncoder-test" />
+        <module name="ArrayRotator" />
+        <module name="PalindromeNumber-test" />
+        <module name="ZerosToEnd" />
+        <module name="BitwiseSumCalculator" />
+        <module name="ElementSum-test" />
+        <module name="CourseSchedule" />
+        <module name="palindrome" />
+        <module name="IntervalMerger-test" />
+        <module name="BinaryTreeMaxPath" />
+        <module name="RomanToInteger" />
+        <module name="ExcelSheet" />
         <module name="NonPrimeSpiralMatrixCreator-test" />
         <module name="ParenthesesValidator-test" />
-        <module name="PatternEncoder-test" />
         <module name="TwoSum" />
         <module name="NumberEncoder-test" />
         <module name="FractionToDecimal-test" />
         <module name="StringTransformer-test" />
         <module name="SortedArray2BST" />
-        <module name="ZerosToEnd" />
         <module name="PrimeDistanceFinder-test" />
-        <module name="ElementSum-test" />
-        <module name="palindrome" />
-        <module name="IntervalMerger-test" />
+        <module name="NonPrimeSprialMatrixCreator-test" />
+        <module name="climbing-stairs" />
+        <module name="MovieRatings" />
         <module name="ArrayElementSwapper-test" />
+        <module name="LCP" />
         <module name="IEventScheduler-test" />
-        <module name="RomanToInteger" />
+        <module name="RepetitiveCharFinder" />
       </profile>
     </annotationProcessing>
   </component>
