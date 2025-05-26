@@ -15,7 +15,6 @@
         <module name="ElementSum-test" />
         <module name="CourseSchedule" />
         <module name="palindrome" />
-        <module name="IntervalMerger-test" />
         <module name="BinaryTreeMaxPath" />
         <module name="RomanToInteger" />
         <module name="ExcelSheet" />
@@ -36,5 +35,8 @@
         <module name="RepetitiveCharFinder" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="IntervalMerger-test" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>
